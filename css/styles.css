@@ -162,6 +162,19 @@ address {
 }
 .link.current {
   color: var(--logo-first-part-color-blue);
+  position: relative;
+}
+.link.current::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  /* width: 100%; */
+  width: 100%;
+  height: 4px;
+  background-color: var(--logo-first-part-color-blue);
+  top: 80px;
+  align-items: center;
 }
 /*========================================================================*/
 
