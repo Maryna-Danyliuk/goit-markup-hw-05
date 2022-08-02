@@ -447,6 +447,8 @@ section.activity {
 
 .portfolio-link {
   display: block;
+  position: relative;
+  overflow: hidden;
 }
 .container-into {
   padding-left: 24px;
@@ -488,9 +490,38 @@ section.activity {
 .btn-list {
   margin-right: 8px;
 }
-.portfolio-link:hover,
-.portfolio-link:focus {
+.portfolio-item:hover,
+.portfolio-item:focus {
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.portfolio-item-text {
+  font-size: 18px;
+  line-height: 1.56;
+  color: var(--background-color);
+}
+
+.portfolio-item-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 63px 24px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(5px);
+  background-color: rgba(33, 150, 243, 0.9);
+  /* z-index: 1; */
+  /* transform: translateY(100%); */
+  transition: transform var(--logo-second-part-color-black);
+  transform: translatex(-100%);
+  transition: transform 250ms ease;
+}
+.portfolio-link:hover,
+.portfolio-item-container:hover {
+  z-index: 2;
+  transform: translatex(0);
 }
 /* Footer */
 .main-footer {
